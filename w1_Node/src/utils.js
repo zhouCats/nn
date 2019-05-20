@@ -1,6 +1,9 @@
 /**
  * 以commonJS的规范定义一个模块
  * 模块作用域：下面的代码只在当前模块生效
+ * 模块对象：
+    * 导出：往模块对象中添加属性
+    * 引入：获取模块对象中的属性
  */
 
 
@@ -17,4 +20,11 @@
 exports.format = formatDate;
 exports.getData = ()=>{
     console.log('my data')
+}
+
+export.get = ()=>{
+
+}
+export.post = ()=>{
+    
 }

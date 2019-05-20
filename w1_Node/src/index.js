@@ -3,7 +3,7 @@
  */
 
  let jq = require('jquery');
- console.log(jq)
+ console.log('jq:',jq)
 
 //  引入模块对象
  let formatDate = require('./utils');//得到一个模块对象

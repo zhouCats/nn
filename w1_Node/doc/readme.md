@@ -43,3 +43,27 @@
 * 服务端与客户端
     * 服务端：服务器（一台7*24小时开机的电脑）
     * 客户端：用户端（一台个人电脑）
+
+* 模块化开发
+    * 利用第三方框架：require.js(AMD规范),sea.js(CMD规范)
+    * NodeJS：commonJS规范
+    * ES6 ： ES Module 规范
+
+
+### 复习
+* ES6前如何实现模块化开发：利用第三方框架（require.js:AMD, sea.js，异步）
+    * require(['jquery'],($)=>{
+        console.log($)
+    })
+    
+* ES6：ES Module
+    import $ from 'jquery'
+* Node:commonJS
+    * let $ = require('jquery');//必须符合commonjs的规范
+    console.log($)
+
+### 知识点
+* 路由：根据url地址的不同响应不同的内容
+* express: 
+
+* fs: file system
