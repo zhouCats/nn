@@ -117,5 +117,21 @@
     * 根据条件得出问题的答案
 
 
+### 知识点
+* fs
+    * stream
+    * pipe
+
+    ```js
+        let gulp = require('gulp');
+        gulp.task('build',()=>{
+            gulp.src('./src/js/*.js')  //得到一个文件流（stream，液体）
+            .pipe(concat())
+            .pipe(uglify())
+            .pipe(gulp.dist('..'))
+        })
+    ```
+
+
 
     
