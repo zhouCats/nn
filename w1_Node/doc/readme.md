@@ -67,3 +67,55 @@
 * express: 
 
 * fs: file system
+
+## day1-2
+
+### 复习NodeJS
+
+1. 模块坏开发
+        规范          框架             异同
+    * AMD           require.js      异步（预加载）
+    * CMD           sea.js          异步（延迟加载）
+    * CommonJS      nodejs          同步（后端）
+    * ES Module     es6             同步（前端）
+
+2. 模块分类
+    * 自定义模块
+    * 内置模块
+        * http
+        * url
+        * querystring
+        * path
+        * fs
+    * 第三方模块
+    * 文件模块（json）
+
+    ```html
+        http://www.laoxie.com?username=laoxie&password=123
+        F:/xxx/xxx
+    ```
+
+3. 操作
+    * 引入 require()
+    * 导出 
+        * exports.xxx = {}
+        * module.exports = {}
+
+4. 练习
+    * 静态资源服务
+
+
+* 什么是h5：大前端（全栈，全端）
+    * 前端：html+css+js 
+    * 后端：php+mySQL,nodeJS+MongoDB
+
+### 类比能力
+* 用熟悉的东西理解陌生的东西
+* 三段论
+    * 给你一个条件
+    * 给你一个问题
+    * 根据条件得出问题的答案
+
+
+
+    
