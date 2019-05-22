@@ -130,8 +130,78 @@
             .pipe(uglify())
             .pipe(gulp.dist('..'))
         })
+    ```  
+
+## day1-3
+
+### 复习
+* stream（读取流&写入流）
+    * pipe()
+    * 事件
+        * data
+        * end
+        * finish
+        * error
+* 压缩解压
+    * zlib
+        * zlib.createGzip()
+        * zlib.createGunzip()
+    * tar
+* express
+    * 静态资源服务器
+
+* request（stream）
+    * request.on('data')
+
+
+### 知识点
+* 中间件（就是一个函数）
+    * 内置中间件
+        * express.static()
+        ```js
+            let express = function(){}
+
+            express.static = function(){
+                return function(){
+
+                }
+            }
+
+            express.static();//=> Function
+        ```
+    * 参数
+        * functino(request,response,next){}
+* 使用中间件
+    * xxx.use([path],...middleware)
+* 扩展运算符
+
+* 接口测试工具：postman
+* 如何解决所有接口写到server.js中的问题
+    * 维护/开发是否方便
+    * 模块化开发
+    
+### 数据接口
+* 后台管理系统
+    * 商品
+        * 获取所有商品
+        * 获取单个商品
+        * 修改商品
+        * 删除商品
+        * 添加商品
+
+    * 接口规范：RESTful
+        * 根据路径实现不同接口
+        * 根据请求类型实现不同接口（get,post,put,delete）
+
+    * 上传
+    ```html
+
+        <form action="api" method="post"> -> ajax
     ```
 
-
-
-    
+* html5新特性
+    * 语义化标签
+    * 新的表单类型
+    * svg
+    * web storage
+    * formData

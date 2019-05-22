@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片上传</title>
+</head>
+<body>
+    <h1>图片上传</h1>
+    <input type="file" id="myfile" multiple/>
+    <button id="btnUpload">上传</button>
+    <script>
+        /**
+         *  formData 
+         */
+        (()=>{
+            let myfile = document.querySelector('#myfile');
+            let btnUpload = document.querySelector('#btnUpload');
+
+            let xhr = new XMLHttpRequest();
+
+            btnUpload.onclick = ()=>{
+                let data = new FormData();
+
+                // data.set('goods',myfile.files[0]);
+
+                // data.set('username','laoxie');
+
+                // myfile.files.forEach(item=>{
+                //     data.append('goods',item);
+                // });
+
+                Array.prototype.forEach.call(myfile.files,item=>{
+                    data.append('album',item);
+                })
+
+
+                xhr.open('post','/api/upload/album',true);
+                xhr.send(data);
+            }
+        })();
+    </script>
+</body>
+</html>
