@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px #FF00FF solid;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+</body>
+
+</html>
+<script>
+
+    // var canvas = document.getElementById("canvas");
+    // var context = canvas.getContext("2d");
+    // context.beginPath();
+    // //设置是个顶点的坐标，根据顶点制定路径   
+    // for (var i = 0; i < 5; i++) {
+    //     //Math.cos(x)    x 的余弦值。返回的是 -1.0 到 1.0 之间的数；
+    //     //Math.sin(x)      x 的正玄值。返回值在 -1.0 到 1.0 之间；
+    //     context.lineTo(Math.cos((18 + i * 72) / 180 * Math.PI) * 200 + 200,
+    //         -Math.sin((18 + i * 72) / 180 * Math.PI) * 200 + 200);
+    //     context.lineTo(Math.cos((54 + i * 72) / 180 * Math.PI) * 80 + 200,
+    //         -Math.sin((54 + i * 72) / 180 * Math.PI) * 80 + 200);
+    // }
+    // context.closePath();
+    // //设置边框样式以及填充颜色   
+    // context.lineWidth = "5";
+    // context.fillStyle = "#F6F152";
+    // context.strokeStyle = "#F5270B";
+    // context.fill();
+    // context.stroke();  
+
+
+    var c = document.getElementById("canvas");//获取canvas对象
+    var context = c.getContext("2d");//构建2d环境
+    context.beginPath();
+    context.moveTo(70, 30);//作线的起点
+    context.lineTo(30, 140);//线的终点
+    context.lineTo(125, 70);
+    context.lineTo(10, 70);
+    context.lineTo(100, 140);
+    context.closePath();//结束/闭合
+    context.strokeStyle = "red";//线的颜色
+    context.stroke();//线的输出
+
+    // context.beginPath();
+    // context.moveTo(200, 30);
+    // context.lineTo(160, 140);
+    // context.lineTo(257, 70);
+    // context.lineTo(140, 70);
+    // context.lineTo(231, 140);
+    // context.closePath();//结束/闭合
+    // context.fillStyle = "gold";//填充的背景色
+    // context.fill()//填充
+
+</script>

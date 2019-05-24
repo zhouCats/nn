@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>火柴人</title>
+
+    <style>
+        canvas {
+            border: 1px #FF00FF solid;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+</body>
+
+</html>
+<!-- canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成 -->
+<script>
+    var a = document.getElementById("canvas");
+    // 创建 context 对象
+    var b = a.getContext("2d");
+    // 元素操作节点都要 beginpath() 完成后closePath()
+    b.beginPath();
+    b.arc(300, 150, 80, 0, 2 * Math.PI, false);
+    b.closePath();
+    b.fillStyle = "blank";//填充颜色
+    b.fill();
+
+    b.beginPath();
+    b.arc(250, 73, 60, 0, 3 * Math.PI / 2, true);
+    b.closePath();
+    b.fillStyle = "green";
+    b.fill();
+
+    b.beginPath();
+    b.arc(307, 12, 60, 0, -3 * Math.PI / 2, false);
+    b.closePath();
+    b.fillStyle = "green";
+    b.fill();
+
+
+    b.beginPath();
+    b.arc(270, 135, 12, 0, 2 * Math.PI, true);
+    b.arc(330, 135, 12, 0, 2 * Math.PI, true);
+    b.closePath();
+    b.fillStyle = "red";
+    b.fill();
+
+    b.beginPath();
+    b.arc(300, 150, 56, 0, Math.PI);
+
+
+    b.lineWidth = "5";
+    b.strokeStyle = "red";
+    b.stroke();
+
+    b.beginPath();
+    b.moveTo(300, 230);
+    b.lineTo(300, 400);
+
+    b.lineTo(190, 550);
+    b.moveTo(300, 400);
+    b.lineTo(500, 550);
+    b.moveTo(300, 280);
+    b.lineTo(170, 340);
+    b.moveTo(300, 280);
+    b.lineTo(430, 340);
+    b.lineWidth = "10";
+    b.strokeStyle = "red";
+    b.stroke();
+    b.closePath();
+</script>
